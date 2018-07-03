@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QWidget" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>160</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="toolBarL">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="drawB">
+      <property name="text">
+       <string>drawB</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="testB">
+      <property name="text">
+       <string>testB</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QOpenGLWidget" name="viewM">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>200</y>
+     <width>600</width>
+     <height>800</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exitB">
+   <property name="geometry">
+    <rect>
+     <x>1874</x>
+     <y>30</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>X</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>exitB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1894</x>
+     <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1878</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

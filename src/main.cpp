@@ -1,10 +1,12 @@
-#include <stdio.h>
+#include "mainwindow.h"
+#include <QtWidgets/QApplication>
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	printf("hello CvKit...\n");
+	QApplication a(argc, argv);
+	MainWindow w;
+	w.setWindowFlags(Qt::FramelessWindowHint);		//нч╠ъ©Р
+	w.show();
 
-	while (1);
-
-	return 0;
+	return a.exec();
 }
