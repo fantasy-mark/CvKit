@@ -36,6 +36,9 @@
     <ClCompile Include="src\ui\mainwindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\xview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="resource\resource.qrc">
@@ -44,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\ui\mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\xview.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

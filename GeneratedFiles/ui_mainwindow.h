@@ -12,9 +12,9 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGridLayout>
-#include <QtWidgets/QOpenGLWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
+#include "xview.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -25,8 +25,10 @@ public:
     QGridLayout *toolBarL;
     QPushButton *drawB;
     QPushButton *testB;
-    QOpenGLWidget *viewM;
+    XView *viewM;
     QPushButton *exitB;
+    QPushButton *startB;
+    QPushButton *stopB;
 
     void setupUi(QWidget *MainWindow)
     {
@@ -51,12 +53,18 @@ public:
 
         toolBarL->addWidget(testB, 0, 1, 1, 1);
 
-        viewM = new QOpenGLWidget(MainWindow);
+        viewM = new XView(MainWindow);
         viewM->setObjectName(QStringLiteral("viewM"));
         viewM->setGeometry(QRect(40, 200, 600, 800));
         exitB = new QPushButton(MainWindow);
         exitB->setObjectName(QStringLiteral("exitB"));
         exitB->setGeometry(QRect(1874, 30, 30, 30));
+        startB = new QPushButton(MainWindow);
+        startB->setObjectName(QStringLiteral("startB"));
+        startB->setGeometry(QRect(670, 390, 75, 23));
+        stopB = new QPushButton(MainWindow);
+        stopB->setObjectName(QStringLiteral("stopB"));
+        stopB->setGeometry(QRect(670, 430, 75, 23));
 
         retranslateUi(MainWindow);
         QObject::connect(exitB, SIGNAL(clicked()), MainWindow, SLOT(close()));
@@ -70,6 +78,8 @@ public:
         drawB->setText(QApplication::translate("MainWindow", "drawB", nullptr));
         testB->setText(QApplication::translate("MainWindow", "testB", nullptr));
         exitB->setText(QApplication::translate("MainWindow", "X", nullptr));
+        startB->setText(QApplication::translate("MainWindow", "start", nullptr));
+        stopB->setText(QApplication::translate("MainWindow", "stop", nullptr));
     } // retranslateUi
 
 };

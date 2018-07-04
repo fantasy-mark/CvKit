@@ -39,7 +39,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QOpenGLWidget" name="viewM">
+  <widget class="XView" name="viewM">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -62,8 +62,41 @@
     <string>X</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="startB">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>390</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>start</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="stopB">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>430</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>stop</string>
+   </property>
+  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>XView</class>
+   <extends>QOpenGLWidget</extends>
+   <header>xview.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections>
   <connection>

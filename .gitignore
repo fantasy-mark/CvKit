@@ -17,7 +17,8 @@
 x64/
 x86/
 bld/
-[Bb]in/
+# fixme by mark
+# [Bb]in/
 [Oo]bj/
 [Ll]og/
 
@@ -258,3 +259,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# add by mark
+GeneratedFiles/
